@@ -5,7 +5,7 @@ type AuthUser = {
     email: string
 }
 export const User = () =>{
-    const [user, setUser] = useState()
+    // const [user, setUser] = useState()
     const handleLogin = () =>{}
     const handleLogout = () =>{}
     return (
