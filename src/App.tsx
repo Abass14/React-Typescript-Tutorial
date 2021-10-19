@@ -9,6 +9,7 @@ import { Oscar } from './component/Oscar';
 import { Person } from './component/Person';
 import { PersonList } from './component/PersonList';
 import { LoggedIn } from './component/state/LoggedIn';
+import { User } from './component/state/User';
 import { Status } from './component/Status';
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
       <Button handleClick={handleClicked} />
       <Container styles={{ border: '1px solid black', padding: '2rem'}} />
       <LoggedIn />
+      <User />
     </div>
   );
 }
