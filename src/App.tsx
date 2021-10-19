@@ -1,6 +1,9 @@
+import React from 'react';
 import './App.css';
+import { Button } from './component/Button';
 import { Greet } from './component/Greet';
 import { Heading } from './component/Heading';
+import { Input } from './component/Input';
 import { Oscar } from './component/Oscar';
 import { Person } from './component/Person';
 import { PersonList } from './component/PersonList';
@@ -32,6 +35,10 @@ function App() {
       last: 'Parker'
     },
   ]
+
+  const handleClicked = (event: React.MouseEvent<HTMLButtonElement>, id: number) =>{
+    console.log("Button Clicked", event, id)
+  }
   return (
     <div className="App">
       <Greet name="Richard" isLoggedIn={true}/>
@@ -42,6 +49,8 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Di Caprio</Heading>
       </Oscar>
+      <Input value=' ' handleChange={(event) => console.log(event)} />
+      <Button handleClick={handleClicked} />
     </div>
   );
 }
