@@ -1,7 +1,7 @@
 import { type } from "os"
 
 type StatusProps = {
-    status: string
+    status: 'loading'|'success'|'error'  //using string literals
 }
 export const Status = (props: StatusProps) => {
     let message
@@ -14,9 +14,7 @@ export const Status = (props: StatusProps) => {
     }
     return (
         <div>
-            <h2>Loading..</h2>
-            <h2>Data Fetched Successfully</h2>
-            <h2>Error Fetching Data</h2>
+            <h2>{message}</h2>
         </div>
     )
 }
