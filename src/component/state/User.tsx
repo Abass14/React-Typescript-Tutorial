@@ -6,7 +6,7 @@ type AuthUser = {
     email: string
 }
 export const User = () =>{
-    const [user, setUser] = useState<AuthUser | null>(null)  //specifying the uninon type of hooks
+    const [user, setUser] = useState<AuthUser | null>({} as AuthUser)  //Instead of using null, we can use the "as" keyword to assert the type of user
     const handleLogin = () =>{
         setUser({
             name: 'Abass',
